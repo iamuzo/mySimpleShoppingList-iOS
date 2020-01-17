@@ -22,30 +22,33 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxv-gZ-3Wo">
+                                            <rect key="frame" x="28" y="49.5" width="42" height="8"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jd-wA-jz0">
-                                            <rect key="frame" x="348" y="33" width="40" height="40"/>
+                                            <rect key="frame" x="354" y="38" width="40" height="30"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="Ytr-We-bGc"/>
-                                                <constraint firstAttribute="width" constant="40" id="h5z-dr-hFd"/>
+                                                <constraint firstAttribute="height" constant="40" id="JRd-AF-bh5"/>
+                                                <constraint firstAttribute="width" constant="40" id="Tsj-Ys-s98"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="isPurchasedButtonIsTapped:" destination="uOw-rs-6br" eventType="touchUpInside" id="fao-Rb-zpx"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxv-gZ-3Wo">
-                                            <rect key="frame" x="20" y="33" width="42" height="40"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="0Jd-wA-jz0" firstAttribute="top" secondItem="dxv-gZ-3Wo" secondAttribute="top" id="DF0-Rz-7d1"/>
-                                        <constraint firstItem="dxv-gZ-3Wo" firstAttribute="leading" secondItem="0h9-jC-9rf" secondAttribute="leadingMargin" id="Hu3-Td-03q"/>
-                                        <constraint firstItem="0Jd-wA-jz0" firstAttribute="leading" secondItem="dxv-gZ-3Wo" secondAttribute="trailing" constant="286" id="Jvi-LV-ZeL"/>
-                                        <constraint firstItem="dxv-gZ-3Wo" firstAttribute="top" secondItem="0h9-jC-9rf" secondAttribute="topMargin" constant="22" id="Uk6-xb-Ufu"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="dxv-gZ-3Wo" secondAttribute="bottom" constant="23" id="aDi-0V-8TG"/>
+                                        <constraint firstItem="0Jd-wA-jz0" firstAttribute="leading" secondItem="0h9-jC-9rf" secondAttribute="leading" constant="354" id="7fy-q0-Rc8"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0Jd-wA-jz0" secondAttribute="trailing" constant="20" symbolic="YES" id="C22-vz-xkz"/>
+                                        <constraint firstItem="dxv-gZ-3Wo" firstAttribute="leading" secondItem="0h9-jC-9rf" secondAttribute="leadingMargin" constant="8" id="Cmp-Op-wr8"/>
+                                        <constraint firstItem="0Jd-wA-jz0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dxv-gZ-3Wo" secondAttribute="trailing" constant="8" symbolic="YES" id="N8a-fY-OXn"/>
+                                        <constraint firstItem="0Jd-wA-jz0" firstAttribute="top" secondItem="0h9-jC-9rf" secondAttribute="top" constant="38.5" id="NTZ-M1-q3l"/>
+                                        <constraint firstAttribute="bottom" secondItem="0Jd-wA-jz0" secondAttribute="bottom" constant="38.5" id="YS6-3R-gYh"/>
+                                        <constraint firstItem="dxv-gZ-3Wo" firstAttribute="top" secondItem="0h9-jC-9rf" secondAttribute="topMargin" constant="38.5" id="gMN-Uk-wTN"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dxv-gZ-3Wo" secondAttribute="bottom" constant="38.5" id="zUR-Zj-C6Q"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
