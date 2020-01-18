@@ -10,42 +10,42 @@
         <scene sceneID="d4S-Cg-CqK">
             <objects>
                 <tableViewController id="Ozt-zx-C4b" customClass="MySimpleShoppingListTableViewController" customModule="mySimpleShoppingList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xd6-mZ-iMV">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xd6-mZ-iMV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="107" id="uOw-rs-6br" customClass="IsPurchasedTableViewCell" customModule="mySimpleShoppingList" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="107"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="60" id="uOw-rs-6br" customClass="IsPurchasedTableViewCell" customModule="mySimpleShoppingList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uOw-rs-6br" id="0h9-jC-9rf">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jd-wA-jz0">
-                                            <rect key="frame" x="348" y="33" width="40" height="40"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jd-wA-jz0">
+                                            <rect key="frame" x="358" y="4" width="52" height="52"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="Ytr-We-bGc"/>
-                                                <constraint firstAttribute="width" constant="40" id="h5z-dr-hFd"/>
+                                                <constraint firstAttribute="width" secondItem="0Jd-wA-jz0" secondAttribute="height" multiplier="1:1" id="vGa-0a-yO8"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="Button" image="checkmark.rectangle" catalog="system"/>
                                             <connections>
                                                 <action selector="isPurchasedButtonIsTapped:" destination="uOw-rs-6br" eventType="touchUpInside" id="fao-Rb-zpx"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxv-gZ-3Wo">
-                                            <rect key="frame" x="20" y="33" width="42" height="40"/>
+                                            <rect key="frame" x="24" y="20" width="330" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="0Jd-wA-jz0" firstAttribute="top" secondItem="dxv-gZ-3Wo" secondAttribute="top" id="DF0-Rz-7d1"/>
-                                        <constraint firstItem="dxv-gZ-3Wo" firstAttribute="leading" secondItem="0h9-jC-9rf" secondAttribute="leadingMargin" id="Hu3-Td-03q"/>
-                                        <constraint firstItem="0Jd-wA-jz0" firstAttribute="leading" secondItem="dxv-gZ-3Wo" secondAttribute="trailing" constant="286" id="Jvi-LV-ZeL"/>
-                                        <constraint firstItem="dxv-gZ-3Wo" firstAttribute="top" secondItem="0h9-jC-9rf" secondAttribute="topMargin" constant="22" id="Uk6-xb-Ufu"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="dxv-gZ-3Wo" secondAttribute="bottom" constant="23" id="aDi-0V-8TG"/>
+                                        <constraint firstAttribute="bottom" secondItem="0Jd-wA-jz0" secondAttribute="bottom" constant="4" id="GLe-Yh-fab"/>
+                                        <constraint firstItem="0Jd-wA-jz0" firstAttribute="leading" secondItem="dxv-gZ-3Wo" secondAttribute="trailing" constant="4" id="K5K-QI-y8x"/>
+                                        <constraint firstAttribute="trailing" secondItem="0Jd-wA-jz0" secondAttribute="trailing" constant="4" id="MDn-JT-I1m"/>
+                                        <constraint firstItem="dxv-gZ-3Wo" firstAttribute="centerY" secondItem="0h9-jC-9rf" secondAttribute="centerY" id="Syp-QS-BHw"/>
+                                        <constraint firstItem="0Jd-wA-jz0" firstAttribute="top" secondItem="0h9-jC-9rf" secondAttribute="top" constant="4" id="jQo-qx-gtD"/>
+                                        <constraint firstItem="dxv-gZ-3Wo" firstAttribute="leading" secondItem="0h9-jC-9rf" secondAttribute="leadingMargin" constant="4" id="xjC-l2-dFW"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -90,4 +90,7 @@
             <point key="canvasLocation" x="-726" y="-10"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark.rectangle" catalog="system" width="64" height="46"/>
+    </resources>
 </document>

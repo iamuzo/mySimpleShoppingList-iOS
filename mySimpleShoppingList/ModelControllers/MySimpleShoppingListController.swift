@@ -29,24 +29,24 @@ class MySimpleShoppingListController {
         }
     }
     
-    //MARK:- CRUD
-    func create(newItemWithName name:String?) {
+    // MARK: CRUD
+    func create(newItemWithName name: String?) {
         guard let itemName = name else {return}
         Item(name: itemName)
         saveToPersistentStore()
     }
     
-    func toggleIsPurchased(item:Item) {
+    func toggleIsPurchased(item: Item) {
         item.isPurchased.toggle()
         saveToPersistentStore()
     }
     
-    func delete(item:Item) {
+    func delete(item: Item) {
         CoreDataStack.context.delete(item)
         saveToPersistentStore()
     }
 
-    //MARK:- Persistent Storage
+    // MARK: Persistent Storage
     private func saveToPersistentStore() {
         do {
             try CoreDataStack.context.save()

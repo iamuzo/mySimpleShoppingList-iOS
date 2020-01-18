@@ -14,20 +14,20 @@ protocol PurchasedButtonCellDelegate: class {
 
 class IsPurchasedTableViewCell: UITableViewCell {
     
-    var delegate: PurchasedButtonCellDelegate?
+    weak var delegate: PurchasedButtonCellDelegate?
     
-    //MARK:- Outlets
+    // MARK: Outlets
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var isPurchasedButton: UIButton!
     
-    //MARK:- Actions
+    // MARK: Actions
     @IBAction func isPurchasedButtonIsTapped(_ sender: UIButton) {
         delegate?.cellButtonTapped(self)
     }
     
     func updateIsPurchasedButtonImage(_ isPurchased: Bool) {
         let imageName = isPurchased ? "complete" : "incomplete"
-        isPurchasedButton.setImage(UIImage(named: imageName), for:  .normal)
+        isPurchasedButton.setImage(UIImage(named: imageName), for: .normal)
     }
     
     func updateCell(WithItem item: Item?) {
