@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class MySimpleShoppingListTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         MySimpleShoppingListController.sharedInstance.fetchedResultsController.delegate = self
@@ -20,7 +20,7 @@ class MySimpleShoppingListTableViewController: UITableViewController {
         super.viewWillAppear(true)
     }
     
-    //MARK:- Actions
+    // MARK: Actions
     @IBAction func addItemButtonTapped(_ sender: UIBarButtonItem) {
         print("Item Added")
         let alertController = UIAlertController(title: "Add Item", message: "Add an item to your shopping list", preferredStyle: .alert)
@@ -72,7 +72,7 @@ class MySimpleShoppingListTableViewController: UITableViewController {
     }
 }
 
-extension MySimpleShoppingListTableViewController : PurchasedButtonCellDelegate {
+extension MySimpleShoppingListTableViewController: PurchasedButtonCellDelegate {
     func cellButtonTapped(_ sender: IsPurchasedTableViewCell) {
         
         /// get the indexPath of the sender
@@ -104,37 +104,36 @@ extension MySimpleShoppingListTableViewController: NSFetchedResultsControllerDel
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         
         switch type {
-            case .delete:
-                guard let indexPath = indexPath else {break}
-                tableView.deleteRows(at: [indexPath], with: .fade)
-            case .insert:
-                guard let newIndexPath = newIndexPath else { break }
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
-            case .move:
-                guard let indexPath = indexPath, let newIndexPath = newIndexPath else { break }
-                tableView.moveRow(at: indexPath, to: newIndexPath)
-            case .update:
-                guard let indexPath = indexPath else { break }
-                tableView.reloadRows(at: [indexPath], with: .automatic)
-
-            @unknown default:
-                fatalError()
+        case .delete:
+            guard let indexPath = indexPath else {break}
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        case .insert:
+            guard let newIndexPath = newIndexPath else { break }
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        case .move:
+            guard let indexPath = indexPath, let newIndexPath = newIndexPath else { break }
+            tableView.moveRow(at: indexPath, to: newIndexPath)
+        case .update:
+            guard let indexPath = indexPath else { break }
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        @unknown default:
+            fatalError()
         }
     }
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         
         switch type {
-            case .insert:
-                tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
-            case .delete:
-                tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
-            case .move:
-                break
-            case .update:
-                break
-            @unknown default:
-                fatalError()
+        case .insert:
+            tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
+        case .delete:
+            tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
+        case .move:
+            break
+        case .update:
+            break
+        @unknown default:
+            fatalError()
         }
     }
 }

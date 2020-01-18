@@ -4,14 +4,14 @@
 //
 //  Created by Uzo on 1/17/20.
 //  Copyright © 2020 Uzo. All rights reserved.
-//
+// the disable rule applies to the guard let _ 
+// swiftlint:disable unused_optional_binding
 
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -51,6 +51,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
-
 }
-
