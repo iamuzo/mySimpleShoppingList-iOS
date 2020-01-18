@@ -48,6 +48,10 @@ class MySimpleShoppingListTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return MySimpleShoppingListController.sharedInstance.fetchedResultsController.sections?.count ?? 0
     }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return MySimpleShoppingListController.sharedInstance.fetchedResultsController.sectionIndexTitles[section] == "1" ? "Already Purchased" : "Pending"
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MySimpleShoppingListController.sharedInstance.fetchedResultsController.sections?[section].numberOfObjects ?? 0
